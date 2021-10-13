@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import testImg from './../images/test-img.png'
+import testImg from "./../images/test-img.png";
 
-AOS.init()
+AOS.init();
 
 export default () => {
   useEffect(() => {
     AOS.init({
       duration: 2000,
-    })
-  }, [])
+    });
+  }, []);
 
   return (
-    <main className="w-screen min-h-screen bg-green-500">
+    <main className="w-screen min-h-screen">
       <div className="h-96"></div>
       <div className="h-96"></div>
       <div className="h-96"></div>
@@ -177,5 +177,5 @@ export default () => {
         </section>
       </div>
     </main>
-  )
-}
+  );
+};

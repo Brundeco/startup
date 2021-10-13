@@ -1,0 +1,49 @@
+// @media (any-pointer: fine) {
+//   .cursor {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     display: block;
+//     pointer-events: none;
+//     opacity: 0;
+//     z-index: 2000;
+//     mix-blend-mode: exclusion;
+//   }
+//   .cursor__inner {
+//     fill: rgba(238, 202, 0, 0);
+//     stroke: rgb(194, 194, 194);
+//     stroke-width: 1px;
+//     border-radius: 90% 70% 70% 90% / 30% 30% 70% 70%;
+//     // mix-blend-mode: screen;
+//     mix-blend-mode: exclusion;
+//   }
+// }
+
+// @media only screen and (max-width: 600px) {
+//   .cursor {
+//     display: none;
+//   }
+// }
+
+@media (any-pointer: fine) {
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    pointer-events: none;
+    opacity: 0;
+    mix-blend-mode: luminosity;
+  }
+
+  .cursor__inner {
+    fill: rgba($color: #000000, $alpha: 1);
+    stroke: var(--cursor-stroke);
+    stroke-width: var(--cursor-stroke-width);
+    mix-blend-mode: overlay;
+  }
+}
+
+body {
+  background-color: green;
+}

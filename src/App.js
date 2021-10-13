@@ -1,21 +1,23 @@
-import testImage from './images/test-img.png'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import testImage from "./images/test-img.png";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import { Home } from './pages'
+import { Home, Hovers } from "./pages";
+import { Cursor, Menu } from "./components";
+// const cursor = import("./assets/js/index");
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        {/* <Route path="/aura" component={Aura} />
-        <Route path="/posters" component={Poster} />
-        <Route path="/about" component={About} />
-        <Route path="/rbtf" component={Rbtf} />
-        <Route path="/gdm" component={Gdm} /> */}
-      </Switch>
-    </BrowserRouter>
-  )
+    <>
+      {/* <Cursor /> */}
+      <Menu />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/hovers" component={Hovers} />
+        </Switch>
+      </BrowserRouter>
+    </>
+  );
 }
 
-export default App
+export default App;
